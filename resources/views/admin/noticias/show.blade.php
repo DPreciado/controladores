@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{$noticia->titulo}}</title>
-</head>
-<body>
+@extends("layouts.admin")
+@section("contenido_principal")
     <a href="{{route("admin.noticias.index")}}">Volver a noticias</a>
     @if($noticia != NULL)
         <h1>{{ $noticia->titulo }}</h1>
@@ -19,5 +12,4 @@
     @else
         <h1>Lo sentimos no se encontró la noticia que buscas</h1>
     @endif
-</body>
-</html>
+@endsection
