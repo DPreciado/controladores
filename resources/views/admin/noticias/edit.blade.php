@@ -70,7 +70,7 @@
                 @if(Session::has("error"))
                     <p style="color: #bb1717">{{ Session::get("error") }}</p>
                 @endif
-                <form method="POST" action="{{ route("admin.noticias.update, $noticia->id") }}">
+                <form method="POST" action="{{ route("admin.noticias.update", $noticia->id) }}">
                     @csrf
                     @method('PUT')
                     <div class="form-group">
