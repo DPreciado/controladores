@@ -84,7 +84,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Autor:</label>
-                        <input class="form-control" name="autor" type="text" value="{{$noticia->Autor}}">
+                        <input class="form-control" name="autor" type="text" value="{{$noticia->autor}}">
                     </div>
                     <div class="form-group">
                         <label for="">Cuerpo:</label>

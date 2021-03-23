@@ -18,7 +18,7 @@ class NoticiaController extends Controller
     }
 
     public function detalles($id) {
-        //sistema dew simulacion de detalles de noticia
+        //sistema de simulacion de detalles de noticia
         $noticia = Noticia::find($id);
         
 
@@ -27,4 +27,6 @@ class NoticiaController extends Controller
 
         return view('noticias.detalles', $argumentos);
     }
+
+    
 }

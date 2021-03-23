@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@if($noticia != NULL) {{ $noticia["titulo"] }} @endif</title>
-</head>
-<body>
-    <a href="{{route("noticias")}}">Volver a noticias</a>
+@extends("layouts.details")
+@section("titulo", "Detalles")
+@section('contenido_principal')
+
+
+    <a href="{{route("noticias")}}"><button> Volver a noticias</button></a>
     @if($noticia != NULL)
         <h1>{{ $noticia->titulo }}</h1>
-        <p>{{ $noticia->fecha }}</p>
-        <h4>{{ $noticia->autor }}</h4>
+        <h1>{{ $noticia->autor }} - {{ $noticia->fecha }}</h1>
         @if($noticia->foto != NULL)
             <img src="{{ $noticia->foto }}">
         @endif
@@ -18,5 +14,5 @@
     @else
         <h1>Lo sentimos no se encontró la noticia que buscas</h1>
     @endif
-</body>
-</html>
+
+@endsection

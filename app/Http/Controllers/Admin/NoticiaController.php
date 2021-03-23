@@ -26,7 +26,7 @@ class NoticiaController extends Controller
     public function create(){
         return view("admin.noticias.create");
     }
-    //Almacenar uan nueva noticia en la BD
+    //Almacenar una nueva noticia en la BD
     public function store(Request $request){
         $nuevaNoticia = new Noticia();
         $nuevaNoticia->titulo = $request->input("titulo");

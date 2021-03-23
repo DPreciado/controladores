@@ -21,11 +21,11 @@ use App\Http\Controllers\Admin\TableroController;
 require __DIR__.'/auth.php';
 
 //Rutas de noticias
-Route::get('/', [InicioController::class,"index"]);
-Route::get('/contacto', [InicioController::class, "contacto"]);
+//Route::get('/', [InicioController::class,"index"]);
+//Route::get('/contacto', [InicioController::class, "contacto"]);
 
-Route::get('/noticias', [NoticiaController::class, "lista"])->name("noticias");
-Route::get('/noticias/{id}', [NoticiaController::class, "detalles"])->name("noticias.detalles");
+Route::get('/', [NoticiaController::class, "lista"])->name("noticias");
+Route::get('/{id}', [NoticiaController::class, "detalles"])->name("noticias.detalles");
 
 //Rutas del admin
 
